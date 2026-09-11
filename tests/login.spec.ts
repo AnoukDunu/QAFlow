@@ -8,7 +8,7 @@ test('User can login', async({page})=>{
 
     await page.getByPlaceholder('Password').fill('secret_sauce');
 
-    await page.locator('#login-button').click();
+    await page.getByRole('button', {name: 'Login'}).click();
 
     await expect(page).toHaveURL(/inventory/);
 });
