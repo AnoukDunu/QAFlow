@@ -10,11 +10,11 @@ test('User can login', async({page})=>{
 });
 
 
-// test('User cannot login', async({page})=>{
-//     await page.goto('https://www.saucedemo.com/');
-//     await page.getByTestId('username').fill('tester');
-//     await page.getByTestId('password').fill('pass');
+test('User cannot login', async({page})=>{
+    await page.goto('https://www.saucedemo.com/');
+    await page.getByTestId('username').fill('tester');
+    await page.getByTestId('password').fill('pass');
 
-//     await expect(page.getByTestId('error')).toBeVisible();
+    await expect(page.getByTestId('error')).toBeVisible();
 
-// })
+})
